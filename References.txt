@@ -8,3 +8,6 @@ https://api.jquery.com/ready/
 https://learn.jquery.com/using-jquery-core/document-ready/
 https://www.w3schools.com/jquery/event_ready.asp
 https://stackoverflow.com/questions/10595913/jquery-function-and-document-ready-the-same
+https://www.w3schools.com/js/js_arrays.asp
+https://www.w3schools.com/js/js_objects.asp
+https://stackoverflow.com/questions/5868850/creating-list-of-objects-in-javascript
