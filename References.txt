@@ -1,0 +1,10 @@
+index.html
+https://www.w3schools.com/tags/tag_thead.asp
+https://www.w3schools.com/tags/tag_tr.asp
+https://www.w3schools.com/tags/tag_th.asp
+
+scripts.js
+https://api.jquery.com/ready/
+https://learn.jquery.com/using-jquery-core/document-ready/
+https://www.w3schools.com/jquery/event_ready.asp
+https://stackoverflow.com/questions/10595913/jquery-function-and-document-ready-the-same
