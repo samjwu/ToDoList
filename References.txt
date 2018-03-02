@@ -16,3 +16,5 @@ https://www.w3schools.com/jquery/html_html.asp
 https://www.w3schools.com/jsref/jsref_forEach.asp
 https://davidwalsh.name/multiline-javascript-strings
 https://www.w3schools.com/tags/tag_td.asp
+https://www.w3schools.com/jquery/event_on.asp
+http://api.jquery.com/on/

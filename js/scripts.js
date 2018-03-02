@@ -33,8 +33,20 @@ $(function() {
                 </tr>\
                 ");
             });
+        },
+
+        changeitemstatus: function() {
+            todoitems.forEach(function(item) {
+                console.log($(this));
+                // if(item.item) {
+                //     item.done = !item.done;
+                // }
+            });
         }
     };
 
     functions.showtodoitems();
+
+
+    $(".todoitem-notdone").on("click", functions.changeitemstatus);
 });
