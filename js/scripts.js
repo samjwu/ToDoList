@@ -1,7 +1,7 @@
 $(function() {
     var todoitems =[
         {
-            item: "Buy a new PC",
+            item: "Buy a new computer",
             done: true
         },
         {
@@ -13,4 +13,24 @@ $(function() {
             done: false
         }
     ];
+
+    var functions = {
+        showtodoitems: function() {
+            var itemlist = $("#itemlist");
+            itemlist.html(""); //clear the list
+            todoitems.forEach(function(todoitems) {
+                itemlist.append("\
+                <tr>\
+                    <td>" + todoitems.item + "</td>\
+                    <td>\
+                        <button>Edit</button>\
+                        <button>Delete</button>\
+                    </td>\
+                </tr>\
+                ");
+            });
+        }
+    };
+
+    functions.showtodoitems();
 });
