@@ -14,14 +14,18 @@ $(function() {
         }
     ];
 
+
     var functions = {
         showtodoitems: function() {
             var itemlist = $("#itemlist");
             itemlist.html(""); //clear the list
-            todoitems.forEach(function(todoitems) {
+
+            todoitems.forEach(function(item) {
+                var todoitemstatus = "todoitem-" + (item.done ? "done" : "notdone");
+                
                 itemlist.append("\
                 <tr>\
-                    <td>" + todoitems.item + "</td>\
+                    <td class=" + todoitemstatus + ">" + item.item + "</td>\
                     <td>\
                         <button>Edit</button>\
                         <button>Delete</button>\

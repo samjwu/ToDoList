@@ -1,0 +1,9 @@
+.todoitem-notdone {
+    color: red;
+    cursor: pointer;
+}
+
+.todoitem-done {
+    color: green;
+    cursor: pointer;
+}
