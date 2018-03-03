@@ -37,11 +37,11 @@ $(function() {
 
         changeitemstatus: function() {
             todoitems.forEach(function(item) {
-                console.log($(this));
+                console.log(this);
                 // if(item.item) {
                 //     item.done = !item.done;
                 // }
-            });
+            }.bind(this));
         }
     };
 

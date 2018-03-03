@@ -18,3 +18,7 @@ https://davidwalsh.name/multiline-javascript-strings
 https://www.w3schools.com/tags/tag_td.asp
 https://www.w3schools.com/jquery/event_on.asp
 http://api.jquery.com/on/
+https://docs.microsoft.com/en-us/scripting/javascript/reference/bind-method-function-javascript
+http://api.jquery.com/bind/
+https://stackoverflow.com/questions/2236747/use-of-the-javascript-bind-method
+https://javascript.info/bind
