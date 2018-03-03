@@ -42,13 +42,29 @@ $(function() {
                 }
             }.bind(this));
             functions.showtodoitems();
+        },
+
+        addtodoitem: function(event) {
+            event.preventDefault();
+
+            var addinput = $("#addinput");
+            var inputvalue = addinput.val();
+
+            todoitems.push({
+                item: inputvalue,
+                done: false
+            });
+            addinput.val("");
+            functions.showtodoitems();
         }
     };
 
     functions.showtodoitems();
 
 
-    // $(".todoitem-notdone").on("click", functions.changeitemstatus);
+    // $(".todoitem-notdone").on("click", functions.changeitemstatus); //stops working when items replaced by showtodoitems
+    $("#addform").on("submit", functions.addtodoitem);
     $("table").on("click", ".todoitem-notdone", functions.changeitemstatus);
     $("table").on("click", ".todoitem-done", functions.changeitemstatus);
+
 });

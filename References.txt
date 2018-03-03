@@ -22,4 +22,5 @@ https://docs.microsoft.com/en-us/scripting/javascript/reference/bind-method-func
 http://api.jquery.com/bind/
 https://stackoverflow.com/questions/2236747/use-of-the-javascript-bind-method
 https://javascript.info/bind
-https://javascript.info/bind
+https://api.jquery.com/event.preventdefault/
+https://www.w3schools.com/jsref/jsref_push.asp
