@@ -20,12 +20,12 @@ $(function() {
             var itemlist = $("#itemlist");
             itemlist.html(""); //clear the list
 
-            todoitems.forEach(function(item) {
-                var todoitemstatus = "todoitem-" + (item.done ? "done" : "notdone");
+            todoitems.forEach(function(todo) {
+                var todoitemstatus = "todoitem-" + (todo.done ? "done" : "notdone");
                 
                 itemlist.append("\
                 <tr>\
-                    <td class=" + todoitemstatus + ">" + item.item + "</td>\
+                    <td class=" + todoitemstatus + ">" + todo.item + "</td>\
                     <td>\
                         <button>Edit</button>\
                         <button>Delete</button>\
@@ -36,17 +36,19 @@ $(function() {
         },
 
         changeitemstatus: function() {
-            todoitems.forEach(function(item) {
-                console.log(this);
-                // if(item.item) {
-                //     item.done = !item.done;
-                // }
+            todoitems.forEach(function(todo) {
+                if(todo.item == $(this).text()) {
+                    todo.done = !todo.done;
+                }
             }.bind(this));
+            functions.showtodoitems();
         }
     };
 
     functions.showtodoitems();
 
 
-    $(".todoitem-notdone").on("click", functions.changeitemstatus);
+    // $(".todoitem-notdone").on("click", functions.changeitemstatus);
+    $("table").on("click", ".todoitem-notdone", functions.changeitemstatus);
+    $("table").on("click", ".todoitem-done", functions.changeitemstatus);
 });

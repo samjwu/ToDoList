@@ -22,3 +22,4 @@ https://docs.microsoft.com/en-us/scripting/javascript/reference/bind-method-func
 http://api.jquery.com/bind/
 https://stackoverflow.com/questions/2236747/use-of-the-javascript-bind-method
 https://javascript.info/bind
+https://javascript.info/bind
