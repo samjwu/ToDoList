@@ -37,15 +37,6 @@ $(function() {
             });
         },
 
-        changeitemstatus: function() {
-            todoitems.forEach(function(todo) {
-                if(todo.item == $(this).text()) {
-                    todo.done = !todo.done;
-                }
-            }.bind(this));
-            functions.showtodoitems();
-        },
-
         addtodoitem: function(event) {
             event.preventDefault();
 
@@ -60,18 +51,31 @@ $(function() {
             functions.showtodoitems();
         },
 
+        changeitemstatus: function() {
+            todoitems.forEach(function(todo) {
+                if(todo.item == $(this).text()) {
+                    todo.done = !todo.done;
+                }
+            }.bind(this));
+            functions.showtodoitems();
+        },
+
         edititem: function() {
-            $(".edit").hide();
-            $(".delete").hide();
-            $(".save").show();
-            $(".cancel").show();
+            var selecteditemoptions = $(this).closest("td");
+
+            selecteditemoptions.find(".edit").hide();
+            selecteditemoptions.find(".delete").hide();
+            selecteditemoptions.find(".save").show();
+            selecteditemoptions.find(".cancel").show();
         },
 
         stopedititem: function() {
-            $(".edit").show();
-            $(".delete").show();
-            $(".save").hide();
-            $(".cancel").hide();
+            var selecteditemoptions = $(this).closest("td");
+
+            selecteditemoptions.find(".edit").show();
+            selecteditemoptions.find(".delete").show();
+            selecteditemoptions.find(".save").hide();
+            selecteditemoptions.find(".cancel").hide();
         }
     };
 

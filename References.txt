@@ -24,3 +24,5 @@ https://stackoverflow.com/questions/2236747/use-of-the-javascript-bind-method
 https://javascript.info/bind
 https://api.jquery.com/event.preventdefault/
 https://www.w3schools.com/jsref/jsref_push.asp
+https://www.w3schools.com/jquery/traversing_closest.asp
+https://api.jquery.com/closest/
