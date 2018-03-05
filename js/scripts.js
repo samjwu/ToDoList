@@ -65,6 +65,13 @@ $(function() {
             $(".delete").hide();
             $(".save").show();
             $(".cancel").show();
+        },
+
+        stopedititem: function() {
+            $(".edit").show();
+            $(".delete").show();
+            $(".save").hide();
+            $(".cancel").hide();
         }
     };
 
@@ -75,6 +82,6 @@ $(function() {
     $("#addform").on("submit", functions.addtodoitem);
     $("table").on("click", ".todoitem-notdone", functions.changeitemstatus);
     $("table").on("click", ".todoitem-done", functions.changeitemstatus);
-    $("table").on("click", ".edit", functions.edititem)
-
+    $("table").on("click", ".edit", functions.edititem);
+    $("table").on("click", ".cancel", functions.stopedititem);
 });
