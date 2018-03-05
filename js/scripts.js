@@ -69,11 +69,10 @@ $(function() {
             selecteditemoptions.find(".save").show();
             selecteditemoptions.find(".cancel").show();
 
-            // selecteditem.removeClass("todoitem-notdone");
-            // selecteditem.removeClass("todoitem-done");
+            functions.currentstatus = selecteditem.attr("class");
+            selecteditem.removeClass(functions.currentstatus);
 
             functions.currenttag = selecteditem.text();
-
             selecteditem.html("<input type='text' class='editinput' value='" + functions.currenttag + "'>");
         },
 
@@ -86,7 +85,8 @@ $(function() {
             selecteditemoptions.find(".save").hide();
             selecteditemoptions.find(".cancel").hide();
 
-            // selecteditem.addClass("todoitem-notdone");
+            selecteditem.addClass(functions.currentstatus);
+
             selecteditem.html(functions.currenttag);
         },
 
