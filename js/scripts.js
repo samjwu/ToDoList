@@ -53,7 +53,7 @@ $(function() {
 
         changeitemstatus: function() {
             todoitems.forEach(function(item) {
-                if(item.tag == $(this).text()) {
+                if(item.tag === $(this).text()) {
                     item.done = !item.done;
                 }
             }.bind(this));
@@ -72,9 +72,9 @@ $(function() {
             // selecteditem.removeClass("todoitem-notdone");
             // selecteditem.removeClass("todoitem-done");
 
-            functions.currentitem = selecteditem.text();
+            functions.currenttag = selecteditem.text();
 
-            selecteditem.html("<input type='text' class='editinput' value='" + functions.currentitem + "'>");
+            selecteditem.html("<input type='text' class='editinput' value='" + functions.currenttag + "'>");
         },
 
         canceledit: function() {
@@ -87,14 +87,18 @@ $(function() {
             selecteditemoptions.find(".cancel").hide();
 
             // selecteditem.addClass("todoitem-notdone");
-            selecteditem.html(functions.currentitem);
+            selecteditem.html(functions.currenttag);
         },
 
         saveedit: function() {
-            var newitem = $(".editinput").val();
+            var newtag = $(".editinput").val();
 
             todoitems.forEach(function(item) {
-
+                if(functions.currenttag === item.tag) {
+                    item.tag = newtag;
+                }
+                functions.currenttag = newtag;
+                functions.canceledit.call(this);
             });
         }
     };
