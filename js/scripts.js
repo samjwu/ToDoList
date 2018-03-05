@@ -1,15 +1,15 @@
 $(function() {
     var todoitems =[
         {
-            item: "Buy a new computer",
+            tag: "Buy a new computer",
             done: true
         },
         {
-            item: "Buy a new car",
+            tag: "Buy a new car",
             done: false
         },
         {
-            item: "Buy a new house",
+            tag: "Buy a new house",
             done: false
         }
     ];
@@ -20,12 +20,12 @@ $(function() {
             var itemlist = $("#itemlist");
             itemlist.html(""); //clear the list
 
-            todoitems.forEach(function(todo) {
-                var todoitemstatus = (todo.done ? "done" : "notdone");
+            todoitems.forEach(function(item) {
+                var todoitemstatus = (item.done ? "done" : "notdone");
                 
                 itemlist.append("\
                 <tr>\
-                    <td class=" + todoitemstatus + ">" + todo.item + "</td>\
+                    <td class=" + todoitemstatus + ">" + item.tag + "</td>\
                     <td>\
                         <button class='edit'>Edit</button>\
                         <button class='delete'>Delete</button>\
@@ -44,7 +44,7 @@ $(function() {
             var inputvalue = addinput.val();
 
             todoitems.push({
-                item: inputvalue,
+                tag: inputvalue,
                 done: false
             });
             addinput.val("");
@@ -52,9 +52,9 @@ $(function() {
         },
 
         changeitemstatus: function() {
-            todoitems.forEach(function(todo) {
-                if(todo.item == $(this).text()) {
-                    todo.done = !todo.done;
+            todoitems.forEach(function(item) {
+                if(item.tag == $(this).text()) {
+                    item.done = !item.done;
                 }
             }.bind(this));
             functions.showtodoitems();
@@ -91,7 +91,11 @@ $(function() {
         },
 
         saveedit: function() {
-            var newitem = $("editinput");
+            var newitem = $(".editinput").val();
+
+            todoitems.forEach(function(item) {
+
+            });
         }
     };
 
