@@ -21,7 +21,7 @@ $(function() {
             itemlist.html(""); //clear the list
 
             todoitems.forEach(function(todo) {
-                var todoitemstatus = "todoitem-" + (todo.done ? "done" : "notdone");
+                var todoitemstatus = (todo.done ? "done" : "notdone");
                 
                 itemlist.append("\
                 <tr>\
@@ -69,15 +69,15 @@ $(function() {
             selecteditemoptions.find(".save").show();
             selecteditemoptions.find(".cancel").show();
 
-            selecteditem.removeClass("todoitem-notdone");
-            selecteditem.removeClass("todoitem-done");
+            // selecteditem.removeClass("todoitem-notdone");
+            // selecteditem.removeClass("todoitem-done");
 
             functions.currentitem = selecteditem.text();
 
             selecteditem.html("<input type='text' class='editinput' value='" + functions.currentitem + "'>");
         },
 
-        stopedititem: function() {
+        canceledit: function() {
             var selecteditemoptions = $(this).closest("td");
             var selecteditem = selecteditemoptions.prev();
 
@@ -86,8 +86,12 @@ $(function() {
             selecteditemoptions.find(".save").hide();
             selecteditemoptions.find(".cancel").hide();
 
-            selecteditem.addClass("todoitem-notdone");
+            // selecteditem.addClass("todoitem-notdone");
             selecteditem.html(functions.currentitem);
+        },
+
+        saveedit: function() {
+            var newitem = $("editinput");
         }
     };
 
@@ -96,8 +100,9 @@ $(function() {
 
     // $(".todoitem-notdone").on("click", functions.changeitemstatus); //stops working when items replaced by showtodoitems
     $("#addform").on("submit", functions.addtodoitem);
-    $("table").on("click", ".todoitem-notdone", functions.changeitemstatus);
-    $("table").on("click", ".todoitem-done", functions.changeitemstatus);
+    $("table").on("click", ".notdone", functions.changeitemstatus);
+    $("table").on("click", ".done", functions.changeitemstatus);
     $("table").on("click", ".edit", functions.edititem);
-    $("table").on("click", ".cancel", functions.stopedititem);
+    $("table").on("click", ".cancel", functions.canceledit);
+    $("table").on("click", ".save", functions.saveedit);
 });

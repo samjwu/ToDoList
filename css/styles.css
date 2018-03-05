@@ -1,9 +1,9 @@
-.todoitem-notdone {
+.notdone {
     color: red;
     cursor: pointer;
 }
 
-.todoitem-done {
+.done {
     color: green;
     cursor: pointer;
 }
