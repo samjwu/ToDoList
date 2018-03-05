@@ -62,11 +62,18 @@ $(function() {
 
         edititem: function() {
             var selecteditemoptions = $(this).closest("td");
+            var selecteditem = selecteditemoptions.prev();
 
             selecteditemoptions.find(".edit").hide();
             selecteditemoptions.find(".delete").hide();
             selecteditemoptions.find(".save").show();
             selecteditemoptions.find(".cancel").show();
+
+            selecteditem.removeClass("todoitem-notdone");
+            selecteditem.removeClass("todoitem-done");
+
+            var currentitem = selecteditem.text();
+            selecteditem.html("<input type='text' class='editinput' value='" + currentitem + "'>");
         },
 
         stopedititem: function() {

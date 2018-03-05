@@ -26,3 +26,6 @@ https://api.jquery.com/event.preventdefault/
 https://www.w3schools.com/jsref/jsref_push.asp
 https://www.w3schools.com/jquery/traversing_closest.asp
 https://api.jquery.com/closest/
+https://www.w3schools.com/jquery/traversing_prev.asp
+https://api.jquery.com/prev/
+https://www.w3schools.com/jquery/html_removeclass.asp
