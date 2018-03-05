@@ -27,8 +27,10 @@ $(function() {
                 <tr>\
                     <td class=" + todoitemstatus + ">" + todo.item + "</td>\
                     <td>\
-                        <button>Edit</button>\
-                        <button>Delete</button>\
+                        <button class='edit'>Edit</button>\
+                        <button class='delete'>Delete</button>\
+                        <button class='save'>Save</button>\
+                        <button class='cancel'>Cancel</button>\
                     </td>\
                 </tr>\
                 ");
@@ -56,6 +58,13 @@ $(function() {
             });
             addinput.val("");
             functions.showtodoitems();
+        },
+
+        edititem: function() {
+            $(".edit").hide();
+            $(".delete").hide();
+            $(".save").show();
+            $(".cancel").show();
         }
     };
 
@@ -66,5 +75,6 @@ $(function() {
     $("#addform").on("submit", functions.addtodoitem);
     $("table").on("click", ".todoitem-notdone", functions.changeitemstatus);
     $("table").on("click", ".todoitem-done", functions.changeitemstatus);
+    $("table").on("click", ".edit", functions.edititem)
 
 });

@@ -7,3 +7,11 @@
     color: green;
     cursor: pointer;
 }
+
+.save {
+    display: none;
+}
+
+.cancel {
+    display: none;
+}
