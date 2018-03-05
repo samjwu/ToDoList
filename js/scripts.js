@@ -47,7 +47,9 @@ $(function() {
                 tag: inputvalue,
                 done: false
             });
-            addinput.val("");
+
+            addinput.val(""); //reset input field
+
             functions.showtodoitems();
         },
 
@@ -57,6 +59,7 @@ $(function() {
                     item.done = !item.done;
                 }
             }.bind(this));
+            
             functions.showtodoitems();
         },
 
@@ -69,6 +72,7 @@ $(function() {
             selecteditemoptions.find(".save").show();
             selecteditemoptions.find(".cancel").show();
 
+            //remove class to prevent status onclick event
             functions.currentstatus = selecteditem.attr("class");
             selecteditem.removeClass(functions.currentstatus);
 
@@ -97,9 +101,11 @@ $(function() {
                 if(functions.currenttag === item.tag) {
                     item.tag = newtag;
                 }
-                functions.currenttag = newtag;
-                functions.canceledit.call(this);
             });
+            
+            functions.currenttag = newtag;
+            
+            functions.canceledit.call(this);
         }
     };
 
