@@ -72,17 +72,22 @@ $(function() {
             selecteditem.removeClass("todoitem-notdone");
             selecteditem.removeClass("todoitem-done");
 
-            var currentitem = selecteditem.text();
-            selecteditem.html("<input type='text' class='editinput' value='" + currentitem + "'>");
+            functions.currentitem = selecteditem.text();
+
+            selecteditem.html("<input type='text' class='editinput' value='" + functions.currentitem + "'>");
         },
 
         stopedititem: function() {
             var selecteditemoptions = $(this).closest("td");
+            var selecteditem = selecteditemoptions.prev();
 
             selecteditemoptions.find(".edit").show();
             selecteditemoptions.find(".delete").show();
             selecteditemoptions.find(".save").hide();
             selecteditemoptions.find(".cancel").hide();
+
+            selecteditem.addClass("todoitem-notdone");
+            selecteditem.html(functions.currentitem);
         }
     };
 
