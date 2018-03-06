@@ -43,6 +43,24 @@ $(function() {
             var addinput = $("#addinput");
             var inputvalue = addinput.val();
 
+            var errmsg = null;
+
+            if(!inputvalue) {
+                errmsg = "To Do Item cannot be null";
+            }
+            else {
+                todoitems.forEach(function(item) {
+                    if(item.tag === inputvalue) {
+                        errmsg = "Cannot have duplicate To Do Items";
+                    }
+                });
+            }
+
+            if(errmsg) {
+                functions.showerror(errmsg);
+                return;
+            }
+
             todoitems.push({
                 tag: inputvalue,
                 done: false
@@ -51,6 +69,10 @@ $(function() {
             addinput.val(""); //reset input field
 
             functions.showtodoitems();
+        },
+
+        showerror: function(errmsg) {
+            $(".errormsg").html(errmsg).slideDown("slow");
         },
 
         changeitemstatus: function() {

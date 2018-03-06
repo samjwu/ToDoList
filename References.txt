@@ -35,3 +35,5 @@ https://www.w3schools.com/jquery/traversing_parent.asp
 https://api.jquery.com/parent/
 https://stackoverflow.com/questions/10499435/parent-vs-closest
 https://www.w3schools.com/jsref/jsref_splice.asp
+https://www.w3schools.com/jquery/eff_slidedown.asp
+http://api.jquery.com/slidedown/

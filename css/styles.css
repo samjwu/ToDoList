@@ -1,10 +1,10 @@
 .notdone {
-    color: red;
+    color: crimson;
     cursor: pointer;
 }
 
 .done {
-    color: green;
+    color: seagreen;
     cursor: pointer;
 }
 
@@ -14,4 +14,9 @@
 
 .cancel {
     display: none;
+}
+
+.errormsg {
+    background: crimson;
+    color: whitesmoke;
 }
