@@ -72,11 +72,14 @@ $(function() {
         },
 
         showerror: function(errmsg) {
-            $(".errormsg").html(errmsg).slideDown("slow");
+            // $(".errormsg").html(errmsg).slideDown("slow");
+            $(".errormsg").html(errmsg).fadeIn();
+            
         },
 
         removeerror: function() {
-            $(".errormsg").slideUp("slow");    
+            // $(".errormsg").slideUp("slow");
+            $(".errormsg").fadeOut();    
         },
 
         changeitemstatus: function() {
