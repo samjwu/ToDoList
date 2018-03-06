@@ -80,18 +80,18 @@ $(function() {
             selecteditem.html("<input type='text' class='editinput' value='" + functions.currenttag + "'>");
         },
 
-        canceledit: function() {
-            var selecteditemoptions = $(this).closest("td");
-            var selecteditem = selecteditemoptions.prev();
+        deleteitem: function() {
+            var selecteditemtext = $(this).parent("td").prev().text();
+            var itemdeleted = false;
 
-            selecteditemoptions.find(".edit").show();
-            selecteditemoptions.find(".delete").show();
-            selecteditemoptions.find(".save").hide();
-            selecteditemoptions.find(".cancel").hide();
+            todoitems.forEach(function(item, index) {
+                if(!itemdeleted && selecteditemtext === item.tag) {
+                    todoitems.splice(index, 1);
+                    itemdeleted = true;
+                }
+            });
 
-            selecteditem.addClass(functions.currentstatus);
-
-            selecteditem.html(functions.currenttag);
+            functions.showtodoitems();
         },
 
         saveedit: function() {
@@ -106,6 +106,20 @@ $(function() {
             functions.currenttag = newtag;
             
             functions.canceledit.call(this);
+        },
+
+        canceledit: function() {
+            var selecteditemoptions = $(this).closest("td");
+            var selecteditem = selecteditemoptions.prev();
+
+            selecteditemoptions.find(".edit").show();
+            selecteditemoptions.find(".delete").show();
+            selecteditemoptions.find(".save").hide();
+            selecteditemoptions.find(".cancel").hide();
+
+            selecteditem.addClass(functions.currentstatus);
+
+            selecteditem.html(functions.currenttag);
         }
     };
 
@@ -117,6 +131,7 @@ $(function() {
     $("table").on("click", ".notdone", functions.changeitemstatus);
     $("table").on("click", ".done", functions.changeitemstatus);
     $("table").on("click", ".edit", functions.edititem);
-    $("table").on("click", ".cancel", functions.canceledit);
+    $("table").on("click", ".delete", functions.deleteitem);
     $("table").on("click", ".save", functions.saveedit);
+    $("table").on("click", ".cancel", functions.canceledit);
 });

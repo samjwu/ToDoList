@@ -30,3 +30,8 @@ https://www.w3schools.com/jquery/traversing_prev.asp
 https://api.jquery.com/prev/
 https://www.w3schools.com/jquery/html_removeclass.asp
 https://stackoverflow.com/questions/2400386/get-class-name-using-jquery
+https://www.w3schools.com/js/js_function_call.asp
+https://www.w3schools.com/jquery/traversing_parent.asp
+https://api.jquery.com/parent/
+https://stackoverflow.com/questions/10499435/parent-vs-closest
+https://www.w3schools.com/jsref/jsref_splice.asp
