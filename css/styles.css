@@ -19,4 +19,10 @@
 .errormsg {
     background: crimson;
     color: whitesmoke;
+    width: 204px;
+    text-align: center;
+}
+
+#addinput {
+    width: 200px;
 }

@@ -75,6 +75,10 @@ $(function() {
             $(".errormsg").html(errmsg).slideDown("slow");
         },
 
+        removeerror: function() {
+            $(".errormsg").slideUp("slow");    
+        },
+
         changeitemstatus: function() {
             todoitems.forEach(function(item) {
                 if(item.tag === $(this).text()) {
@@ -150,6 +154,7 @@ $(function() {
 
     // $(".todoitem-notdone").on("click", functions.changeitemstatus); //stops working when items replaced by showtodoitems
     $("#addform").on("submit", functions.addtodoitem);
+    $("#addinput").on("keyup", functions.removeerror);
     $("table").on("click", ".notdone", functions.changeitemstatus);
     $("table").on("click", ".done", functions.changeitemstatus);
     $("table").on("click", ".edit", functions.edititem);
