@@ -4,6 +4,9 @@ https://www.w3schools.com/tags/tag_tr.asp
 https://www.w3schools.com/tags/tag_th.asp
 https://www.w3schools.com/tags/tag_tbody.asp
 
+styles.css
+https://www.w3schools.com/css/css_table.asp
+
 scripts.js
 https://api.jquery.com/ready/
 https://learn.jquery.com/using-jquery-core/document-ready/

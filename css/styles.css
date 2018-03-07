@@ -1,20 +1,42 @@
+body {
+    color: #fff;
+    background: #000;
+}
+
 h1 {
     text-align: center;
+    font-size: 50px;
 }
 
 table {
     text-align: center;
     margin-left: auto;
     margin-right: auto;
+    width: 50%;
+}
+
+th {
+    font-size: 30px;
+    height: 60px;
+}
+
+td {
+    font-size: 20px;
+    height: 40px;
+
+}
+
+tr:hover {
+    color: #eee;
 }
 
 .notdone {
-    color: crimson;
+    color: orangered;
     cursor: pointer;
 }
 
 .done {
-    color: seagreen;
+    color: lawngreen;
     cursor: pointer;
 }
 
