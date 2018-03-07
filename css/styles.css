@@ -13,21 +13,27 @@ table {
     margin-left: auto;
     margin-right: auto;
     width: 50%;
+    border: 0px;
+    border-collapse: collapse;
 }
 
 th {
     font-size: 30px;
     height: 60px;
+    border: 0px;
+    background: #ffa500;
+    color: #fff;
 }
+
 
 td {
     font-size: 20px;
     height: 40px;
-
+    border: 0px;
 }
 
 tr:hover {
-    color: #eee;
+    background: #222;
 }
 
 .notdone {
