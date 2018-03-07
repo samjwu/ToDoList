@@ -126,6 +126,22 @@ $(function() {
         saveedit: function() {
             var newtag = $(".editinput").val();
 
+            if(!newtag) {
+                errmsg = "To Do Item cannot be null";
+            }
+            else {
+                todoitems.forEach(function(item) {
+                    if(item.tag === newtag) {
+                        errmsg = "Cannot have duplicate To Do Items";
+                    }
+                });
+            }
+
+            if(errmsg) {
+                functions.showerror(errmsg);
+                return;
+            }
+
             todoitems.forEach(function(item) {
                 if(functions.currenttag === item.tag) {
                     item.tag = newtag;
