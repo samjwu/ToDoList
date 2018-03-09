@@ -6,15 +6,18 @@ body {
 h1 {
     text-align: center;
     font-size: 50px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 table {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
     width: 50%;
     border: 0px;
     border-collapse: collapse;
+
 }
 
 th {
@@ -25,6 +28,15 @@ th {
     color: #fff;
 }
 
+th:first-of-type {
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+th:last-of-type {
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
 
 td {
     font-size: 20px;
@@ -46,12 +58,56 @@ tr:hover {
     cursor: pointer;
 }
 
+.add {
+    border: none;
+    border-radius: 15px;
+    font-size: 15px;
+    padding: 5px;
+    background: #ffa500;
+    color: #fff;
+    width: 100px;
+}
+
+.edit {
+    border: none;
+    border-radius: 15px;
+    font-size: 15px;
+    padding: 5px;
+    background: #ffa500;
+    color: #fff;
+    width: 100px;
+}
+
+.delete {
+    border: none;
+    border-radius: 15px;
+    font-size: 15px;
+    padding: 5px;
+    background: #ffa500;
+    color: #fff;
+    width: 100px;
+}
+
 .save {
     display: none;
+    border: none;
+    border-radius: 15px;
+    font-size: 15px;
+    padding: 5px;
+    background: #ffa500;
+    color: #fff;
+    width: 100px;
 }
 
 .cancel {
     display: none;
+    border: none;
+    border-radius: 15px;
+    font-size: 15px;
+    padding: 5px;
+    background: #ffa500;
+    color: #fff;
+    width: 100px;
 }
 
 .errormsg {
@@ -69,4 +125,11 @@ tr:hover {
 
 #addinput {
     width: 200px;
+    border: none;
+    border-radius: 15px;
+    font-size: 15px;
+    padding: 5px;
+    background: #ffa500;
+    color: #fff;
+    width: 300px;
 }
