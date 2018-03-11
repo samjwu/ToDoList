@@ -67,6 +67,8 @@ tr:hover {
     color: #fff;
     width: 100px;
     cursor: pointer;
+    overflow: hidden;
+    position: relative;
 }
 
 .add:hover {
@@ -76,6 +78,37 @@ tr:hover {
     -o-transition-duration: 1s;
     background: #fff;
     color: #ffa500;
+}
+
+.add:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 5px;
+    height: 5px;
+    background: #ff8c00;
+    opacity: 0;
+    border-radius: 100%;
+}
+  
+@keyframes ripple {
+    0% {
+        transform: scale(0, 0);
+        opacity: 1;
+    }
+    20% {
+        transform: scale(30, 30);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(100, 100);
+        opacity: 0;
+    }
+}
+
+.add:focus:not(:active):after {
+    animation: ripple 2s ease-out;
 }
 
 .edit {
@@ -179,7 +212,7 @@ tr:hover {
     border-radius: 15px;
     font-size: 15px;
     padding: 5px;
-    background: #ffa500;
-    color: #fff;
+    background: #fff;
+    color: #000;
     width: 300px;
 }

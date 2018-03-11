@@ -18,6 +18,18 @@ https://www.w3schools.com/cssref/css3_pr_transition-duration.asp
 https://www.w3schools.com/cssref/sel_after.asp
 https://css-tricks.com/almanac/selectors/a/active/
 https://developer.mozilla.org/en-US/docs/Web/CSS/:active
+https://www.w3schools.com/cssref/pr_gen_content.asp
+https://www.w3schools.com/cssref/css3_pr_transform.asp
+https://www.w3schools.com/css/css3_2dtransforms.asp
+https://www.rapidtables.com/web/color/orange-color.html
+https://www.w3schools.com/cssref/css3_pr_animation-keyframes.asp
+https://developer.mozilla.org/en-US/docs/Web/CSS/%40keyframes
+https://css-tricks.com/snippets/css/keyframe-animation-syntax/
+https://developer.mozilla.org/en-US/docs/Web/CSS/:not
+https://www.w3schools.com/cssref/sel_focus.asp
+https://developer.mozilla.org/en-US/docs/Web/CSS/%3Afocus
+https://css-tricks.com/almanac/selectors/f/focus/
+https://stackoverflow.com/questions/1677990/what-is-the-difference-between-focus-and-active
 
 scripts.js
 https://api.jquery.com/ready/
