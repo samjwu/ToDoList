@@ -13,6 +13,11 @@ https://www.w3schools.com/cssref/sel_last-of-type.asp
 https://www.w3schools.com/css/css3_buttons.asp
 https://www.w3schools.com/css/css_colors.asp
 https://www.w3schools.com/cssref/css_colors.asp
+https://www.w3schools.com/css/css_pseudo_classes.asp
+https://www.w3schools.com/cssref/css3_pr_transition-duration.asp
+https://www.w3schools.com/cssref/sel_after.asp
+https://css-tricks.com/almanac/selectors/a/active/
+https://developer.mozilla.org/en-US/docs/Web/CSS/:active
 
 scripts.js
 https://api.jquery.com/ready/

@@ -70,8 +70,10 @@ tr:hover {
 }
 
 .add:hover {
-    -webkit-transition-duration: 1s;
     transition-duration: 1s;
+    -webkit-transition-duration: 1s;
+    -moz-transition-duration: 1s;
+    -o-transition-duration: 1s;
     background: #fff;
     color: #ffa500;
 }
@@ -87,9 +89,11 @@ tr:hover {
     cursor: pointer;
 }
 
-.edit:hover {
-    -webkit-transition-duration: 1s;
+.edit:hover {    
     transition-duration: 1s;
+    -webkit-transition-duration: 1s;
+    -moz-transition-duration: 1s;
+    -o-transition-duration: 1s;
     background: #fff;
     color: #ffa500;
 }
@@ -106,8 +110,10 @@ tr:hover {
 }
 
 .delete:hover {
-    -webkit-transition-duration: 1s;
     transition-duration: 1s;
+    -webkit-transition-duration: 1s;
+    -moz-transition-duration: 1s;
+    -o-transition-duration: 1s;
     background: #fff;
     color: #ffa500;
 }
@@ -125,8 +131,10 @@ tr:hover {
 }
 
 .save:hover {
-    -webkit-transition-duration: 1s;
     transition-duration: 1s;
+    -webkit-transition-duration: 1s;
+    -moz-transition-duration: 1s;
+    -o-transition-duration: 1s;
     background: #fff;
     color: #ffa500;
 }
@@ -144,8 +152,10 @@ tr:hover {
 }
 
 .cancel:hover {
-    -webkit-transition-duration: 1s;
     transition-duration: 1s;
+    -webkit-transition-duration: 1s;
+    -moz-transition-duration: 1s;
+    -o-transition-duration: 1s;
     background: #fff;
     color: #ffa500;
 }
