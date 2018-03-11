@@ -5,10 +5,14 @@ https://www.w3schools.com/tags/tag_th.asp
 https://www.w3schools.com/tags/tag_tbody.asp
 
 styles.css
+https://www.w3schools.com/css/css_display_visibility.asp
 https://www.w3schools.com/css/css_table.asp
 https://stackoverflow.com/questions/4932181/rounded-table-corners-css-only
 https://www.w3schools.com/cssref/sel_first-of-type.asp
 https://www.w3schools.com/cssref/sel_last-of-type.asp
+https://www.w3schools.com/css/css3_buttons.asp
+https://www.w3schools.com/css/css_colors.asp
+https://www.w3schools.com/cssref/css_colors.asp
 
 scripts.js
 https://api.jquery.com/ready/

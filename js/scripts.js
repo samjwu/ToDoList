@@ -186,4 +186,5 @@ $(function() {
     $("table").on("click", ".delete", functions.deleteitem);
     $("table").on("click", ".save", functions.saveedit);
     $("table").on("click", ".cancel", functions.canceledit);
+    $("table").on("click", ".cancel", functions.removeerror);
 });
